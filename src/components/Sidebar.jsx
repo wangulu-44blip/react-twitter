@@ -2,9 +2,12 @@ import { Link, useNavigate } from "react-router";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdHome } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
-import { IoIosNotificationsOutline } from "react-icons/io";
+
 import { SiGooglemessages } from "react-icons/si";
 import { CgProfile } from "react-icons/cg";
+import {signOut} from "firebase/auth"
+import {auth} from "../firebase"
+
 
 
 import toast from "react-hot-toast";
@@ -67,9 +70,9 @@ function Sidebar() {
           </li>
         ))}
       </ul>
-      {/* <button onClick={handleSignOut}>Sign Out</button> */}
+      <button onClick={handleSignOut}>Sign Out</button>
       {/* <signoutModal/> */}
-      <SignoutModal/>
+      {/* <SignoutModal/> */}
     </aside>
   );
 }
